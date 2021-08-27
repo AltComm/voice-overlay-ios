@@ -100,7 +100,7 @@ public class NoPermissionScreenConstants {
   public var doneText = "Done"
   
   /// Text color of all labels in screen
-  public var textColor: UIColor = .white
+  public var textColor: UIColor = .clear
   
   /// Background color of the view
   public var backgroundColor: UIColor = UIColor(red: 50/255, green: 50/255, blue: 50/255, alpha: 0.95)
