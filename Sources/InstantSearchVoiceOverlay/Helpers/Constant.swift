@@ -158,7 +158,7 @@ public class ResultScreenConstants {
   /// Title shown at the very top of the screen when input has been processed
 public var titleProcessed: String = "" {//"Searching for:" {
     didSet {
-      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "titleProcessedNotification"), object: nil, userInfo: ["titleProcessed": ""])
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "titleProcessedNotification"), object: nil, userInfo: ["titleProcessed": titleProcessed])
     }
   }
   

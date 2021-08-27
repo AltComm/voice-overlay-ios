@@ -156,7 +156,7 @@ class InputViewController: UIViewController {
       strongSelf.speechText = text
       strongSelf.customData = customData
       strongSelf.speechError = nil
-      strongSelf.subtitleLabel.text = text
+      strongSelf.subtitleLabel.text = ""//text
       strongSelf.subtitleBulletLabel.text = ""
       strongSelf.titleLabel.text = text.isEmpty ? strongSelf.constants.titleListening : strongSelf.constants.titleInProgress
       
