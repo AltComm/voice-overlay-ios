@@ -66,7 +66,7 @@ class InputViewController: UIViewController {
 
     
     if settings.autoStart {
-//      titleLabel.text = constants.titleListening
+      titleLabel.text = constants.titleListening
       toggleRecording(recordingButton)
     }
   }
@@ -120,9 +120,9 @@ class InputViewController: UIViewController {
     recordingButton.setimage(isRecording)
     
     if isRecording {
-//      titleLabel.text = constants.titleListening
-//      subtitleLabel.text = constants.subtitleInitial
-//      subtitleBulletLabel.attributedText = ViewHelpers.add(stringList: constants.subtitleBulletList, font: subtitleBulletLabel.font, bullet: constants.subtitleBullet)
+      titleLabel.text = constants.titleListening
+      subtitleLabel.text = constants.subtitleInitial
+      subtitleBulletLabel.attributedText = ViewHelpers.add(stringList: constants.subtitleBulletList, font: subtitleBulletLabel.font, bullet: constants.subtitleBullet)
       tryAgainLabel.text = ""
     } else {
       speechController?.stopRecording()
@@ -158,7 +158,7 @@ class InputViewController: UIViewController {
       strongSelf.speechError = nil
       strongSelf.subtitleLabel.text = text
       strongSelf.subtitleBulletLabel.text = ""
-//      strongSelf.titleLabel.text = text.isEmpty ? strongSelf.constants.titleListening : strongSelf.constants.titleInProgress
+      strongSelf.titleLabel.text = text.isEmpty ? strongSelf.constants.titleListening : strongSelf.constants.titleInProgress
       
       if final {
         strongSelf.autoStopTimer.invalidate()
@@ -211,9 +211,9 @@ class InputViewController: UIViewController {
 //  }
   
   func handleVoiceError(_ error: Error?) {
-//    titleLabel.text = constants.titleError
-//    subtitleLabel.text = constants.subtitleError
-//    subtitleBulletLabel.attributedText = nil
+    titleLabel.text = constants.titleError
+    subtitleLabel.text = constants.subtitleError
+    subtitleBulletLabel.attributedText = nil
     tryAgainLabel.text = constants.errorHint
     toggleRecording(recordingButton, dismiss: false)
   }

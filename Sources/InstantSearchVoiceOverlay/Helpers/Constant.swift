@@ -115,28 +115,28 @@ public class NoPermissionScreenConstants {
 
 public class InputScreenConstants {
   /// Title shown at the very top of the screen before the recording button is activated.
-  public var titleInitial = "Press the button to start"
+  public var titleInitial = ""//"Press the button to start"
   
   /// Title shown at the very top of the screen when the recording button is activated and no voice inputs received.
-  public var titleListening = "Listening..."
+  public var titleListening = ""//"Listening..."
   
   /// Subtitle shown at the top of the screen before the recording button is activated.
-  public var subtitleInitial = "Say something like:"
+  public var subtitleInitial = ""//"Say something like:"
   
   /// The bullet point shown for each item in the list of suggestions
-  public var subtitleBullet = "\u{2022}"
+  public var subtitleBullet = ""//"\u{2022}"
   
   /// The list of query suggestions shown in a bullet list
-  public var subtitleBulletList = ["\"iphone case\"", "\"Running shoes\""]
+  public var subtitleBulletList = [""]//["\"iphone case\"", "\"Running shoes\""]
   
   /// Title shown at the very top of the screen when the recording button is activated and voice inputs have been received.
-  public var titleInProgress = "Searching for:"
+  public var titleInProgress = ""//"Searching for:"
   
   /// Title shown at the very top of the screen when the recording button is activated and an error occured
-  public var titleError = "Sorry, we didn't quite get that"
+  public var titleError = ""//"Sorry, we didn't quite get that"
   
   /// Subtitle shown at the top of the screen when the recording button is activated and an error occured
-  public var subtitleError = "Try repeating your request."
+  public var subtitleError = ""//"Try repeating your request."
   
   /// Text shown at the bottom of the screen when an error occured and prompting the user to try again.
   public var errorHint = "Try Again"
@@ -153,17 +153,17 @@ public class InputScreenConstants {
 
 public class ResultScreenConstants {
   /// Title shown at the very top of the screen when processing input results
-  public var title = "Processing Resuts..."
+  public var title = ""//"Processing Resuts..."
   
   /// Title shown at the very top of the screen when input has been processed
-  public var titleProcessed: String = "Searching for:" {
+public var titleProcessed: String = "" {//"Searching for:" {
     didSet {
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "titleProcessedNotification"), object: nil, userInfo: ["titleProcessed": titleProcessed])
     }
   }
   
   /// Subtitle shown at the top of the screen when input has been processed
-  public var subtitle = "Please wait a few seconds while we process your input"
+  public var subtitle = ""//"Please wait a few seconds while we process your input"
   
   /// Text shown at the bottom of the screen prompting the user to start again
   public var startAgainText = "Start Again"
