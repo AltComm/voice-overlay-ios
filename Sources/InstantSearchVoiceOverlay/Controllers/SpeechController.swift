@@ -29,7 +29,7 @@ public typealias SpeechErrorHandler = (Error?) -> Void
   
   /// Init with the device's default locale
   override public convenience init() {
-    self.init(speechRecognizer: SFSpeechRecognizer())
+      self.init(speechRecognizer: SFSpeechRecognizer())
   }
   
   /// Init with a locale
@@ -43,6 +43,14 @@ public typealias SpeechErrorHandler = (Error?) -> Void
     }
     self.speechRecognizer = speechRecognizer
     self.speechRecognizer.defaultTaskHint = .search
+      if #available(iOS 13, *) {
+          if(!self.speechRecognizer.supportsOnDeviceRecognition)
+          {
+              fatalError("Device does not support on device recognition!")
+          }
+      } else {
+          fatalError("Device does not support on device recognition!")
+      }
     super.init()
   }
   
@@ -102,7 +110,13 @@ public typealias SpeechErrorHandler = (Error?) -> Void
     let recordingFormat = node.outputFormat(forBus: 0)
     
     speechRequest = SFSpeechAudioBufferRecognitionRequest()
-    
+    if #available(iOS 13, *) {
+      if(self.speechRecognizer.supportsOnDeviceRecognition)
+      {
+          speechRequest?.requiresOnDeviceRecognition = true
+      }
+    }
+      
     node.installTap(onBus: 0,
                     bufferSize: SpeechController.AUDIO_BUFFER_SIZE,
                     format: recordingFormat) { [weak self] (buffer, _) in
