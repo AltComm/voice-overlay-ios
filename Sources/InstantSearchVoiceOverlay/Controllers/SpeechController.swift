@@ -43,14 +43,6 @@ public typealias SpeechErrorHandler = (Error?) -> Void
     }
     self.speechRecognizer = speechRecognizer
     self.speechRecognizer.defaultTaskHint = .search
-      if #available(iOS 13, *) {
-          if(!self.speechRecognizer.supportsOnDeviceRecognition)
-          {
-              fatalError("Device does not support on device recognition!")
-          }
-      } else {
-          fatalError("Device does not support on device recognition!")
-      }
     super.init()
   }
   
@@ -111,10 +103,7 @@ public typealias SpeechErrorHandler = (Error?) -> Void
     
     speechRequest = SFSpeechAudioBufferRecognitionRequest()
     if #available(iOS 13, *) {
-      if(self.speechRecognizer.supportsOnDeviceRecognition)
-      {
-          speechRequest?.requiresOnDeviceRecognition = true
-      }
+      speechRequest?.requiresOnDeviceRecognition = true
     }
       
     node.installTap(onBus: 0,
