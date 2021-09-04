@@ -90,7 +90,7 @@ class ViewHelpers {
         tryAgainLabel.topAnchor.constraint(equalTo: recordButton.bottomAnchor, constant: 15).isActive = true
         tryAgainLabel.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
         tryAgainLabel.text = text
-        tryAgainLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
+        tryAgainLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
         tryAgainLabel.textColor = textColor
         tryAgainLabel.textAlignment = .center
     }
