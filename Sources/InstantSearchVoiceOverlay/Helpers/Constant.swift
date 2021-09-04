@@ -61,7 +61,7 @@ public class VoiceUISettings {
 public class PermissionScreenConstants {
   
   /// Title shown at the very top of the screen.
-  public var title = "You can use voice search to find products"
+  public var title = "You can use voice to interact with the app"
   
   /// Subtitle shown at the top of the screen
   public var subtitle = "May we access your device's microphone to enable voice search?"
