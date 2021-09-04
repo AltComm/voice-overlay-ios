@@ -215,6 +215,7 @@ class InputViewController: UIViewController {
     subtitleLabel.text = constants.subtitleError
     subtitleBulletLabel.attributedText = nil
     tryAgainLabel.text = constants.errorHint
+    tryAgainLabel.textColor = UIColor.black
     toggleRecording(recordingButton, dismiss: false)
   }
 }

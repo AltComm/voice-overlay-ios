@@ -139,7 +139,7 @@ public class InputScreenConstants {
   public var subtitleError = ""//"Try repeating your request."
   
   /// Text shown at the bottom of the screen when an error occured and prompting the user to try again.
-  public var errorHint = "Try Again"
+  public var errorHint = "Your device is not compatible with our offline speech recognizer. Please contact support@altcomm.co"
   
   /// Layout of the input button that records the user's voice input
   public var inputButtonConstants = InputButtonConstants()
