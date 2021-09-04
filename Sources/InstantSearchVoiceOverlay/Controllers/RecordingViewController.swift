@@ -216,6 +216,7 @@ class InputViewController: UIViewController {
     subtitleBulletLabel.attributedText = nil
     tryAgainLabel.text = constants.errorHint
     tryAgainLabel.textColor = UIColor.black
+    tryAgainLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
     toggleRecording(recordingButton, dismiss: false)
   }
 }
