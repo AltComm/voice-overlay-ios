@@ -43,7 +43,7 @@ class InputViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let margins = view.layoutMarginsGuide
+    var margins = view.layoutMarginsGuide
     let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
     
     ViewHelpers.translatesAutoresizingMaskIntoConstraintsFalse(for: subViews)
