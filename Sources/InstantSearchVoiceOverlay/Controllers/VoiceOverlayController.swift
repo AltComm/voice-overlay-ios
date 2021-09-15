@@ -108,8 +108,7 @@ public typealias RecordableHandler = () -> Recordable
       }
     }
     
-    inputViewController.modalPresentationStyle = .popover
-
+    inputViewController.modalPresentationStyle = .currentContext
     DispatchQueue.main.async {
       view.present(inputViewController, animated: true)
     }
