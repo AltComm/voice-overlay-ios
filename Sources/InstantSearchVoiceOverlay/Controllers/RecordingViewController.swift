@@ -44,7 +44,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     super.viewDidLoad()
         
     let margins = view.layoutMarginsGuide
-    let subViews = [recordingButton, tryAgainLabel]//[titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
+    let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, recordingButton, tryAgainLabel]//[titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
     
     ViewHelpers.translatesAutoresizingMaskIntoConstraintsFalse(for: subViews)
     ViewHelpers.addSubviews(for: subViews, in: view)
@@ -228,6 +228,6 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
 class CustomSizePresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let bounds = containerView?.bounds else { return .zero }
-        return CGRect(x: 0, y: bounds.height / 2, width: bounds.width, height: bounds.height / 2)
+        return CGRect(x: 0, y: 40, width: bounds.width, height: bounds.height - 40)
     }
 }
