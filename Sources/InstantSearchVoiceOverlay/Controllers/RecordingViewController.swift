@@ -40,12 +40,15 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
   var dismissHandler: ((Bool) -> ())? = nil
   var resultScreentimer: Timer?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
+  init() {
+    print("came here toooo")
     self.transitioningDelegate = self
     self.modalPresentationStyle = .custom
-    
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+        
     let margins = view.layoutMarginsGuide
     let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
     
