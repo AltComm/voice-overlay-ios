@@ -43,7 +43,6 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print("came here")
     self.transitioningDelegate = self
     self.modalPresentationStyle = .custom
     
@@ -224,6 +223,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        print("came here tooo")
         return CustomSizePresentationController(presentedViewController: presented, presenting: presentingViewController)
     }
 }
