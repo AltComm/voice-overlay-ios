@@ -108,6 +108,7 @@ public typealias RecordableHandler = () -> Recordable
       }
     }
     
+    inputViewController.transitioningDelegate = inputViewController
     inputViewController.modalPresentationStyle = .custom
     print(inputViewController.transitioningDelegate)
     DispatchQueue.main.async {

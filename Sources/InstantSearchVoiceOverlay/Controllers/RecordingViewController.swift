@@ -39,13 +39,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
   
   var dismissHandler: ((Bool) -> ())? = nil
   var resultScreentimer: Timer?
-  
-  init() {
-    print("came here toooo")
-    self.transitioningDelegate = self
-    self.modalPresentationStyle = .custom
-  }
-  
+    
   override func viewDidLoad() {
     super.viewDidLoad()
         
