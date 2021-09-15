@@ -43,7 +43,9 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    print("came here")
     self.transitioningDelegate = self
+    self.modalPresentationStyle = .custom
     
     let margins = view.layoutMarginsGuide
     let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
@@ -224,11 +226,11 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return CustomSizePresentationController(presentedViewController: presented, presenting: presentingViewController)
     }
+}
 
-    class CustomSizePresentationController: UIPresentationController {
-        override var frameOfPresentedViewInContainerView: CGRect {
-            guard let bounds = containerView?.bounds else { return .zero }
-            return CGRect(x: 0, y: bounds.height / 2, width: bounds.width, height: bounds.height / 2)
-        }
+class CustomSizePresentationController: UIPresentationController {
+    override var frameOfPresentedViewInContainerView: CGRect {
+        guard let bounds = containerView?.bounds else { return .zero }
+        return CGRect(x: 0, y: bounds.height / 2, width: bounds.width, height: bounds.height / 2)
     }
 }
