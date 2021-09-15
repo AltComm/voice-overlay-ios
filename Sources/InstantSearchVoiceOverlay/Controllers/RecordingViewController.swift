@@ -220,7 +220,6 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        print("came here tooo")
         return CustomSizePresentationController(presentedViewController: presented, presenting: presentingViewController)
     }
 }
@@ -228,6 +227,6 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
 class CustomSizePresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let bounds = containerView?.bounds else { return .zero }
-        return CGRect(x: 0, y: bounds.height / 2, width: bounds.width, height: bounds.height / 2)
+        return CGRect(x: 0, y: 50, width: bounds.width, height: bounds.height - 50)
     }
 }
