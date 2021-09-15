@@ -9,7 +9,7 @@
 import UIKit
 
 @available(iOS 10.0, *)
-class InputViewController: UIViewController {
+class InputViewController: UIViewController, UIViewControllerTransitioningDelegate {
   
   var speechController: Recordable?
   
@@ -42,6 +42,8 @@ class InputViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.transitioningDelegate = self
     
     let margins = view.layoutMarginsGuide
     let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
@@ -210,12 +212,23 @@ class InputViewController: UIViewController {
 //    })
 //  }
   
-  func handleVoiceError(_ error: Error?) {
-    titleLabel.text = constants.titleError
-    subtitleLabel.text = constants.subtitleError
-    subtitleBulletLabel.attributedText = nil
-    tryAgainLabel.text = constants.errorHint
-    tryAgainLabel.textColor = UIColor.black
-    toggleRecording(recordingButton, dismiss: false)
-  }
+    func handleVoiceError(_ error: Error?) {
+        titleLabel.text = constants.titleError
+        subtitleLabel.text = constants.subtitleError
+        subtitleBulletLabel.attributedText = nil
+        tryAgainLabel.text = constants.errorHint
+        tryAgainLabel.textColor = UIColor.black
+        toggleRecording(recordingButton, dismiss: false)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomSizePresentationController(presentedViewController: presented, presenting: presentingViewController)
+    }
+
+    class CustomSizePresentationController: UIPresentationController {
+        override var frameOfPresentedViewInContainerView: CGRect {
+            guard let bounds = containerView?.bounds else { return .zero }
+            return CGRect(x: 0, y: bounds.height / 2, width: bounds.width, height: bounds.height / 2)
+        }
+    }
 }
