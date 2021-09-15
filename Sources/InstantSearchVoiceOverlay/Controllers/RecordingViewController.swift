@@ -44,7 +44,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
     super.viewDidLoad()
         
     let margins = view.layoutMarginsGuide
-    let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, recordingButton, tryAgainLabel]//[titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
+    let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
     
     ViewHelpers.translatesAutoresizingMaskIntoConstraintsFalse(for: subViews)
     ViewHelpers.addSubviews(for: subViews, in: view)
