@@ -48,7 +48,7 @@ class ViewHelpers {
         closeView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         closeView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         closeView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
-        closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -90).isActive = true
+        closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -30).isActive = true
         closeView.backgroundColor = .clear
     }
 
