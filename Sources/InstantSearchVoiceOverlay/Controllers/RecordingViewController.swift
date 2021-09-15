@@ -69,6 +69,7 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
       titleLabel.text = constants.titleListening
       toggleRecording(recordingButton)
     }
+    
   }
   
 //  @objc func resultScreenTextReceived(_ notification: NSNotification) {
@@ -227,6 +228,6 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
 class CustomSizePresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let bounds = containerView?.bounds else { return .zero }
-        return CGRect(x: 0, y: 100, width: bounds.width, height: bounds.height - 200)
+        return CGRect(x: 0, y: 200, width: bounds.width, height: bounds.height - 400)
     }
 }
