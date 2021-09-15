@@ -227,6 +227,6 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
 class CustomSizePresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let bounds = containerView?.bounds else { return .zero }
-        return CGRect(x: 0, y: 500, width: bounds.width, height: bounds.height - 900)
+        return CGRect(x: 0, y: 100, width: bounds.width, height: bounds.height - 200)
     }
 }
