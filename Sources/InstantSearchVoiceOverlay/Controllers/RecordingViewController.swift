@@ -43,8 +43,8 @@ class InputViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    var margins = view.layoutMarginsGuide
-    let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, closeView, recordingButton, tryAgainLabel]
+    let margins = view.layoutMarginsGuide
+    let subViews = [titleLabel, subtitleLabel, subtitleBulletLabel, recordingButton, tryAgainLabel]
     
     ViewHelpers.translatesAutoresizingMaskIntoConstraintsFalse(for: subViews)
     ViewHelpers.addSubviews(for: subViews, in: view)
@@ -53,7 +53,7 @@ class InputViewController: UIViewController {
     ViewHelpers.setConstraintsForTitleLabel(titleLabel, margins, constants.titleInitial, constants.textColor)
     ViewHelpers.setConstraintsForSubtitleLabel(subtitleLabel, titleLabel, margins, constants.subtitleInitial, constants.textColor)
     ViewHelpers.setConstraintsForSubtitleBulletLabel(subtitleBulletLabel, subtitleLabel, margins, constants.subtitleBulletList, constants.textColor)
-    ViewHelpers.setConstraintsForCloseView(closeView, margins, backgroundColor: constants.backgroundColor)
+//    ViewHelpers.setConstraintsForCloseView(closeView, margins, backgroundColor: constants.backgroundColor)
     ViewHelpers.setConstraintsForRecordingButton(recordingButton, margins, recordingButtonConstants: constants.inputButtonConstants)
     ViewHelpers.setConstraintsForTryAgainLabel(tryAgainLabel, recordingButton, margins, "", constants.textColor)
     
