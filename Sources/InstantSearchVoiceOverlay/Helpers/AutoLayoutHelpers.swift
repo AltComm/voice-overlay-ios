@@ -49,7 +49,7 @@ class ViewHelpers {
 //        closeView.heightAnchor.constraint(equalToConstant: 30).isActive = true
 //        closeView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
 //        closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -30).isActive = true
-        closeView.widthAnchor.constraint(equalToConstant: margins.widthAnchor).isActive = true
+        closeView.widthAnchor.constraint(equalTo: margins.widthAnchor).isActive = true
         closeView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         closeView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
         closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
