@@ -14,7 +14,7 @@ public class CloseView: UIView
 {
     override public func draw(_ rect: CGRect)
     {
-        drawRingFittingInsideView()
+        //drawRingFittingInsideView()
     }
     
     internal func drawRingFittingInsideView()->()

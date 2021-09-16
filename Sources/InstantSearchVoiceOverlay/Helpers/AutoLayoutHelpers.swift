@@ -45,11 +45,15 @@ class ViewHelpers {
   }
 
   static func setConstraintsForCloseView(_ closeView: CloseView, _ margins: UILayoutGuide, backgroundColor: UIColor) {
-        closeView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        closeView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//        closeView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+//        closeView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//        closeView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
+//        closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -30).isActive = true
+        closeView.widthAnchor.constraint(equalToConstant: margins.widthAnchor).isActive = true
+        closeView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         closeView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
-        closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -30).isActive = true
-        closeView.backgroundColor = .clear
+        closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+        closeView.backgroundColor = .blue
     }
 
     static func setConstraintsForFirstButton(_ firstButton: UIButton, _ margins: UILayoutGuide, _ text: String, _ textColor: UIColor) {
