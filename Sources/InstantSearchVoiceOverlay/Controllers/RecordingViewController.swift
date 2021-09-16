@@ -87,6 +87,11 @@ class InputViewController: UIViewController, UIViewControllerTransitioningDelega
 //      })
 //    }
 //  }
+
+    public func willLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.view.frame = CGRect(x: 0 , y: 150, width: self.view.frame.width, height: self.view.frame.height - 300)
+    }
   
   // This is a fix for labels not always showing the current intrinsic multiline height
   public override func viewDidLayoutSubviews() {
