@@ -53,7 +53,7 @@ class ViewHelpers {
         closeView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         closeView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
         closeView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
-        closeView.backgroundColor = .white
+        closeView.backgroundColor = .clear
     }
 
     static func setConstraintsForFirstButton(_ firstButton: UIButton, _ margins: UILayoutGuide, _ text: String, _ textColor: UIColor) {
