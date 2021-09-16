@@ -110,7 +110,7 @@ public typealias RecordableHandler = () -> Recordable
     
 //    inputViewController.transitioningDelegate = inputViewController
 //    inputViewController.modalPresentationStyle = .custom
-    inputViewController.modalPresentationStyle = .overCurrentContext
+    inputViewController.modalPresentationStyle = .pageSheet
     DispatchQueue.main.async {
       view.present(inputViewController, animated: true)
     }
